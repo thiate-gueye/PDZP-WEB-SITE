@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head}">
+</head>
+<body id="top">
+<main>
+  <header th:replace="~{fragments/layout :: header}"></header>
+  <section class="hero" id="accueil">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000"
+         data-bs-pause="hover">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('img/Panorama rural.png')"></div>
+        <div class="carousel-item" style="background-image: url('img/piste.png')"></div>
+        <div class="carousel-item" style="background-image: url('img/matam.png')"></div>
+        <div class="carousel-item" style="background-image: url('img/pdzp.png')"></div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Image précédente">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Image suivante">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow"> PDZP-2 : Une nouvelle ambition pour les territoires </span>
+
+        <h1>
+          Connecter les territoires.
+          <br />
+          <span>Révéler les potentiels.</span>
+        </h1>
+
+        <p class="hero-copy">
+          Des pistes rurales aux chaînes de valeur agricoles, le PDZP contribue à rapprocher les
+          producteurs des marchés et à renforcer les économies locales. Le PDZP-2 entend
+          consolider ces acquis pour inscrire les résultats dans la durée.
+        </p>
+
+        <div class="row d-flex">
+          <div class="hero-actions col-md-4">
+            <a class="btn-custom btn-pale" href="#projet">
+              Découvrir le PDZP
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-actions col-md-4">
+            <a class="btn-custom btn-pale" href="#priorites">
+              Les priorités du PDZP
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="hero-actions col-md-4">
+            <a class="btn-custom btn-pale" href="#approche">
+              L'approche du PDZP
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

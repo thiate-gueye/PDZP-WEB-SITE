@@ -824,6 +824,10 @@ section[id] {
   transform: translateX(4px);
 }
 
+.priority-footer{
+      text-align: center !important;
+}
+
 /* ===== BANDEAU D'APPEL À L'ACTION ===== */
 
 .cta-band {

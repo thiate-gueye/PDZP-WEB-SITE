@@ -37,4 +37,11 @@ public class AccueilController {
     public String contact(){
         return "accueil/contact";
     }
+
+    @GetMapping("/actualite")
+    public String actualite(){
+        return "documentations/actualite";
+    }
 }
+
+

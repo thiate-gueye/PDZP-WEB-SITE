@@ -1,6 +1,4 @@
 (function () {
-  "use strict";
-
   var header = document.getElementById("mainNavbar");
   var toggle = document.getElementById("siteToggle");
   var menu = document.getElementById("siteMenu");

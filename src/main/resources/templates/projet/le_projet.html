@@ -12,8 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
             rel="stylesheet"/>
     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
     <link rel="stylesheet" th:href="@{/css/le_projet.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
 <body id="top" data-page="projet">
 <main>
@@ -66,7 +68,7 @@
             <a class="chip active" href="#ambition"><i class="fa-solid fa-bullseye"></i>PDZP</a>
             <a class="chip" href="#priorites"><i class="fa-solid fa-road"></i>Nos priorités</a>
             <a class="chip" href="#mise-en-oeuvre"><i class="fa-solid fa-diagram-project"></i>Notre approche</a>
-            <a class="chip" href="#territoires"><i class="fa-solid fa-map-location-dot"></i>Territoires</a>
+            <a class="chip" href="#composantes"><i class="fa-solid fa-map-location-dot"></i>Composantes</a>
             <a class="chip" href="#beneficiaires"><i class="fa-solid fa-people-group"></i>Acteurs</a>
             <a class="chip" href="#resultats"><i class="fa-solid fa-chart-line"></i>Résultats</a>
         </div>
@@ -82,9 +84,6 @@
                     Le PDZP-2 s'inscrit dans la continuité des interventions antérieures. Il consolide les dynamiques économiques *
                     locales en agissant sur les infrastructures, la production, les chaînes de valeur et les capacités des acteurs.
                 </p>
-                <a href="#mise-en-oeuvre" class="btn btn-dark">
-                    Comprendre notre approche <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
             <div class="timeline reveal r">
                 <article class="tl">
@@ -191,27 +190,59 @@
         </div>
     </section>
 
-    <section class="sec alt" id="territoires" data-k="3">
-        <div class="container terr">
-            <div class="reveal">
-                <span class="eyebrow">Ancrage territorial</span>
-                <h2>Au plus près des réalités locales.</h2>
-                <p>Le programme couvre un vaste périmètre au Sénégal pour rapprocher les interventions des besoins des collectivités, des producteurs et des acteurs locaux.</p>
-                <div class="chips2">
-                    <span>Diourbel</span><span>Fatick</span><span>Kaffrine</span><span>Kaolack</span>
-                    <span>Kédougou</span><span>Kolda</span><span>Louga</span><span>Matam</span>
-                    <span>Saint-Louis</span><span>Sédhiou</span><span>Tambacounda</span >
-                    <span>Thiès</span>
+    <section class="section-padding priorities-section" id="composantes" data-k="3">
+        <div class="container">
+            <div class="row sec-head align-items-end mb-5 g-3">
+                <div class="col-lg-7 reveal">
+                    <span class="eyebrow"> Composantes du projet </span>
+                    <h2 class="section-title mb-0">Trois Composantes pour aller plus loin.</h2>
                 </div>
-                <a th:href="@{/sig}" class="btn btn-dark">
-                    Explorer la cartographie <i class="fa-solid fa-map-location-dot"></i>
-                </a>
+
+                <div class="col-lg-5 reveal">
+                    <p class="section-description">
+                        Le PDZP-2 capitalise sur les acquis de la première phase et s'inscrit dans une logique de durabilité, de développement
+                        économique et de pilotage territorial.
+                    </p>
+                </div>
             </div>
-            <div class="stage reveal r" role="img" aria-label="Territoires d'intervention du PDZP-2">
-                <div class="cap">
-                    <small>Une approche territoriale</small>
-                    <h3>12 régions, 66 communes, 770 villages</h3>
-                </div>
+
+            <div class="grid3">
+                <!-- composante 1 -->
+                <article class="card simple priority-card reveal">
+                    <span class="priority-number"> Composante 01 </span>
+                    <div class="priority-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+                    <h3>Entretenir durablement les pistes</h3>
+                    <p>Faire évoluer l'entretien ponctuel vers une maintenance planifiée, mieux organisée et pérenne.</p>
+                    <a class="priority-arrow" th:href="@{/pdzp/composante1}" aria-label="Découvrir la priorité 1">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+                <!-- composante 2 -->
+                <article class="card simple priority-card reveal">
+                    <span class="priority-number"> Composante 02 </span>
+                    <div class="priority-icon">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3>Consolider les chaînes de valeur</h3>
+                    <p>Renforcer la qualité, la gestion et la valorisation économique des filières agricoles locales.</p>
+                    <a class="priority-arrow" th:href="@{/pdzp/composante2}" aria-label="Découvrir la priorité 2">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
+                <!-- composante 3 -->
+                <article class="card simple priority-card reveal">
+                    <span class="priority-number"> Composante 03 </span>
+                    <div class="priority-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3>Renforcer la gouvernance locale</h3>
+                    <p>Soutenir la maîtrise d'ouvrage territoriale et la sécurisation des mécanismes de financement.</p>
+                    <a class="priority-arrow" th:href="@{/pdzp/composante3}" aria-label="Découvrir la priorité 3">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </article>
             </div>
         </div>
     </section>
@@ -274,17 +305,19 @@
         </div>
     </section>
 
-    <section class="cta">
+    <section class="cta cta-band">
         <div class="container">
-            <div class="cta-panel">
+            <div class="cta-panel reveal">
                 <div>
-                    <h2>Découvrez le PDZP-2 sur le terrain.</h2>
-                    <p>Consultez les documents, explorez les territoires et parcourez les réalisations en images.</p>
+                    <h2>Comprendre les acquis. Préparer des impacts durables.</h2>
+                    <p>
+                        Le PDZP-2 s'inscrit dans la continuité des réalisations et des enseignements de la première phase, avec une attention
+                        renforcée à la durabilité des investissements et au pilotage territorial.
+                    </p>
                 </div>
-                <div class="cta-btns">
-                    <a class="btn btn-dark" th:href="@{/phototech}"><i class="fa-regular fa-images"></i> Voir la photothèque</a>
-                    <a class="btn btn-line" th:href="@{/publication}">Publications <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <a class="btn-custom btn-blue" th:href="@{/publication}">
+                    Découvrir les documents <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -294,14 +327,14 @@
         <div class="pdzp-footer__wrap">
             <div class="pdzp-footer__columns">
                 <div class="pdzp-footer__identity">
-                    <a th:href="@{/}" class="pdzp-footer__brand">
+                    <span class="pdzp-footer__brand">
                       <span class="pdzp-footer__logo">
                         <img th:src="@{/img/logo2.jpeg}" />
                       </span>
                       <span class="pdzp-footer__heading h3">
                          <p>Projet de Désenclavement<br> des Zones de Production</p>
                       </span>
-                    </a>
+                    </span>
                     <p>Connecter les territoires, rapprocher les producteurs des marchés et soutenir les dynamiques économiques rurales.</p>
                 </div>
 
@@ -363,8 +396,10 @@
             </div>
         </div>
     </footer>
-    <script th:src="@{/js/main.js}" defer></script>
+
     <script th:src="@{/js/le_projet.js}" defer></script>
+    <script th:src="@{/js/index.js}" defer></script>
+    <script th:src="@{/js/main.js}" defer></script>
 </main>
 </body>
 </html>

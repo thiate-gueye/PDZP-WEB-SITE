@@ -17,7 +17,7 @@
 </head>
 
 <body id="top">
-<main>
+<main class="pb-5">
   <header class="site-header" id="mainNavbar">
     <div class="site-container site-header__inner">
       <a class="site-brand" th:href="@{/}" aria-label="Accueil du PDZP-2">
@@ -43,7 +43,7 @@
   </header>
 
   <section class="hero" id="accueil">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000" data-bs-pause="hover">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Image 2"></button>
@@ -77,25 +77,6 @@
           Des pistes rurales aux chaînes de valeur agricoles, le PDZP contribue à rapprocher les producteurs des marchés et à renforcer
           les économies locales. Le PDZP-2 entend consolider ces acquis pour inscrire les résultats dans la durée.
         </p>
-
-        <div class="row d-flex">
-          <div class="hero-actions col-md-4">
-            <a class="btn-custom btn-pale" href="#projet">
-              Découvrir le PDZP <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="hero-actions col-md-4">
-            <a class="btn-custom btn-pale" href="#priorites">
-              Les priorités du PDZP <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="hero-actions col-md-4">
-            <a class="btn-custom btn-pale" href="#approche">
-              L'approche du PDZP <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -111,7 +92,7 @@
     </div>
   </section>
 
-  <section class="stats-wrap pb-4" id="resultats">
+  <section class="stats-wrap" id="resultats">
     <div class="container">
       <div class="stats-panel">
         <div class="row g-0">
@@ -222,83 +203,8 @@
                 </div>
               </div>
             </div>
-            <a class="btn-custom btn-blue" href="#priorites">
-              Comprendre les priorités du PDZP-2 <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-padding priorities-section" id="priorites">
-    <div class="container">
-      <div class="row align-items-end mb-5 g-4">
-        <div class="col-lg-7 reveal">
-          <span class="eyebrow"> La suite du projet </span>
-          <h2 class="section-title mb-0">Trois Composantes pour aller plus loin.</h2>
-        </div>
-
-        <div class="col-lg-5 reveal">
-          <p class="section-description">
-            Le PDZP-2 capitalise sur les acquis de la première phase et s'inscrit dans une logique de durabilité, de développement
-            économique et de pilotage territorial.
-          </p>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <!-- composante 1 -->
-        <div class="col-12 col-sm-6 col-xl-4">
-          <article class="priority-card reveal">
-            <span class="priority-number"> Composante 01 </span>
-            <div class="priority-icon">
-              <i class="fa-solid fa-road"></i>
-            </div>
-            <h3>Entretenir durablement les pistes</h3>
-            <p>Faire évoluer l'entretien ponctuel vers une maintenance planifiée, mieux organisée et pérenne.</p>
-            <a class="priority-arrow" th:href="@{/pdzp/composante1}" aria-label="Découvrir la priorité 1">
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- composante 2 -->
-        <div class="col-12 col-sm-6 col-xl-4">
-          <article class="priority-card reveal">
-            <span class="priority-number"> Composante 02 </span>
-            <div class="priority-icon">
-              <i class="fa-solid fa-seedling"></i>
-            </div>
-            <h3>Consolider les chaînes de valeur</h3>
-            <p>Renforcer la qualité, la gestion et la valorisation économique des filières agricoles locales.</p>
-            <a class="priority-arrow" th:href="@{/pdzp/composante2}" aria-label="Découvrir la priorité 2">
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-
-        <!-- composante 3 -->
-        <div class="col-12 col-sm-6 col-xl-4">
-          <article class="priority-card reveal">
-            <span class="priority-number"> Composante 03 </span>
-            <div class="priority-icon">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-            <h3>Renforcer la gouvernance locale</h3>
-            <p>Soutenir la maîtrise d'ouvrage territoriale et la sécurisation des mécanismes de financement.</p>
-            <a class="priority-arrow" th:href="@{/pdzp/composante3}" aria-label="Découvrir la priorité 3">
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-      </div>
-
-      <div class="mt-2 priority-footer reveal">
-        <a class="btn-custom btn-blue" th:href="@{/pdzp}">
-          Explorer la présentation complète du projet
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
       </div>
     </div>
   </section>
@@ -367,7 +273,7 @@
     <div class="container">
       <div class="row align-items-end mb-5 g-4">
         <div class="col-lg-8 reveal">
-          <span class="eyebrow"> Explorez le PDZP </span>
+          <span class="eyebrow">Au plus près du projet </span>
           <h2 class="section-title">Le projet sur le terrain.</h2>
           <p class="section-description">
             Découvrez les réalisations, les infrastructures de soutien aux activités économiques et les ressources qui documentent
@@ -375,22 +281,18 @@
           </p>
         </div>
         <div class="col-lg-4 text-lg-end reveal">
-          <a class="btn-custom btn-pale" th:href="@{/publication}">
-            Consulter les publications
-            <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </div>
       <div class="row g-4">
         <!-- Infrastructures -->
         <div class="col-12 col-md-6 col-lg-4">
-          <a class="explore-card reveal" th:href="@{/pdzp/composante1}">
+          <a class="explore-card reveal">
             <img th:src="@{/img/piste.png}" alt="Pistes rurales" loading="lazy" />
             <div class="explore-card-content">
               <span>Infrastructures rurales</span>
               <h3>
                 Des pistes qui rapprochent
-                <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
               </h3>
               <p>Les infrastructures qui facilitent les échanges et l'accès aux marchés.</p>
             </div>
@@ -399,12 +301,12 @@
 
         <!-- Chaînes de valeur -->
         <div class="col-12 col-md-6 col-lg-4">
-          <a class="explore-card reveal" th:href="@{/pdzp/composante2}">
+          <a class="explore-card reveal">
             <img th:src="@{/img/pdzp.png}" loading="lazy" />
             <div class="explore-card-content">
               <span>Économie locale</span>
               <h3>
-                Des filières à renforcer <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                Des filières à renforcer
               </h3>
               <p>Les équipements et initiatives au service des chaînes de valeur.</p>
             </div>
@@ -413,12 +315,12 @@
 
         <!-- Cartographie -->
         <div class="col-12 col-md-6 col-lg-4">
-          <a class="explore-card reveal" th:href="@{/sig}">
+          <a class="explore-card reveal">
             <img th:src="@{/img/matam.png}" alt="Territoires d'intervention" loading="lazy" />
             <div class="explore-card-content">
               <span>Cartographie</span>
               <h3>
-                Lire les territoires <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                Lire les territoires
               </h3>
               <p>Explorer les ressources géographiques disponibles.</p>
             </div>
@@ -435,32 +337,26 @@
           <span class="eyebrow"> Suivre le projet </span>
           <h2 class="section-title mb-0">Publications & ressources</h2>
         </div>
-        <div class="col-lg-5 reveal">
-          <p class="section-description">
-            Retrouvez les documents et ressources qui permettent de comprendre les réalisations, de suivre l'évolution du
-            projet et de capitaliser ses enseignements.
-          </p>
-        </div>
+        <div class="col-lg-5 reveal"></div>
       </div>
       <div class="row g-4">
         <!-- Rapport d'achèvement -->
         <div class="col-12 col-md-6 col-lg-4">
           <article class="news-card reveal">
-            <div class="news-image">
-              <img th:src="@{/img/copil.png}" loading="lazy" />
-              <span class="news-label"> Publication de référence </span>
-            </div>
+            <a th:href="@{/publication}">
+              <div class="news-image">
+                <img th:src="@{/img/copil.png}" loading="lazy" />
+                <span class="news-label"> Publication de référence </span>
+              </div>
+              </a>
             <div class="news-body">
               <div class="news-date">
-                <i class="fa-regular fa-file-pdf"></i> Rapport 2019–2025
+                <i class="fa-regular fa-file-pdf"></i> Documentation du projet
               </div>
-              <h3>Rapport d'achèvement du PDZP</h3>
+              <h3>Rapports & etudes</h3>
               <p>
-                Les réalisations, les résultats, les enseignements et les perspectives identifiés à l'issue de la première phase.
+                Les réalisations, les résultats et les enseignements du projet
               </p>
-              <a class="text-link" th:href="@{/publication}">
-                Accéder aux publications <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </article>
         </div>
@@ -468,20 +364,18 @@
         <!-- Photothèque -->
         <div class="col-12 col-md-6 col-lg-4">
           <article class="news-card reveal">
-            <div class="news-image">
+            <a th:href="@{/phototech}">
+              <div class="news-image">
               <img th:src="@{/img/matam.png}" loading="lazy" />
-              <span class="news-label"> Territoires </span>
+              <span class="news-label"> Phototèque </span>
             </div>
+            </a>
             <div class="news-body">
               <div class="news-date">
-                <i class="fa-regular fa-images"></i> Reportages & images
+                <i class="fa-regular fa-images"></i>Images des réalisations
               </div>
               <h3>Le projet en images</h3>
               <p> Des visuels pour découvrir les réalisations et les dynamiques locales accompagnées par le projet.</p>
-              <a class="text-link" th:href="@{/phototech}">
-                Explorer la photothèque
-                <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </article>
         </div>
@@ -489,21 +383,20 @@
         <!-- SIG -->
         <div class="col-12 col-md-6 col-lg-4">
           <article class="news-card reveal">
-            <div class="news-image">
+            <a th:href="@{/sig}">
+              <div class="news-image">
               <img th:src="@{/img/pdzp.png}" loading="lazy" />
-              <span class="news-label"> SIG </span>
+              <span class="news-label"> Cartographie </span>
             </div>
+            </a>
             <div class="news-body">
               <div class="news-date">
-                <i class="fa-solid fa-map"></i> Cartographie
+                <i class="fa-solid fa-map"></i> Cartographie des réalisations
               </div>
               <h3>Comprendre la dimension territoriale</h3>
               <p>
                 Consulter les ressources cartographiques disponibles pour situer les interventions du projet.
               </p>
-              <a class="text-link" th:href="@{/sig}">
-                Accéder aux cartes <i class="fa-solid fa-arrow-right"></i>
-              </a>
             </div>
           </article>
         </div>
@@ -511,82 +404,82 @@
     </div>
   </section>
 
-  <section class="cta-band">
+  <section class="partners-section" aria-labelledby="partners-title">
     <div class="container">
-      <div class="cta-panel reveal">
+      <div class="partners-heading d-flex justify-content-between align-items-end flex-wrap gap-4">
         <div>
-          <h2>Comprendre les acquis. Préparer des impacts durables.</h2>
-          <p>
-            Le PDZP-2 s'inscrit dans la continuité des réalisations et des enseignements de la première phase, avec une attention
-            renforcée à la durabilité des investissements et au pilotage territorial.
-          </p>
+          <span class="eyebrow"> Ensemble pour les territoires </span>
+          <h2 id="partners-title">Nos partenaires</h2>
+          <p>Une dynamique collective au service d'un impact durable.</p>
         </div>
-        <a class="btn-custom btn-blue" th:href="@{/publication}">
-          Découvrir les documents <i class="fa-solid fa-arrow-right"></i>
-        </a>
+      </div>
+      <div class="partner-arrows">
+        <button type="button" id="partnerPrev" aria-label="Partenaires précédents">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="partners-window">
+          <div class="partners-track" id="partnersTrack">
+            <div class="partner-card">
+              <span class="partner-symbol bad">BAD</span>
+              <strong> Banque africaine de développement </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol fida">FIDA</span>
+              <strong> Fonds international de développement agricole </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol ofid">OFID</span>
+              <strong> Fonds de l'OPEP pour le développement international </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol uemoa">UEMOA</span>
+              <strong> Union économique et monétaire ouest-africaine </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol ue">UE</span>
+              <strong> Union européenne </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol senegal">🇸🇳</span>
+              <strong> État du Sénégal </strong>
+            </div>
+
+            <div class="partner-card">
+              <span class="partner-symbol pndl">PNDL</span>
+              <strong> Programme national de développement local </strong>
+            </div>
+          </div>
+        </div>
+        <button type="button" id="partnerNext" aria-label="Partenaires suivants">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>
+
 </main>
 
-<section class="partners-section" aria-labelledby="partners-title">
+<section class="cta-band">
   <div class="container">
-    <div class="partners-heading d-flex justify-content-between align-items-end flex-wrap gap-4">
+    <div class="cta-panel reveal">
       <div>
-        <span class="eyebrow"> Ensemble pour les territoires </span>
-        <h2 id="partners-title">Nos partenaires</h2>
-        <p>Une dynamique collective au service d'un impact durable.</p>
+        <h2>Comprendre les acquis. Préparer des impacts durables.</h2>
+        <p>
+          Le PDZP-2 s'inscrit dans la continuité des réalisations et des enseignements de la première phase, avec une attention
+          renforcée à la durabilité des investissements et au pilotage territorial.
+        </p>
       </div>
-    </div>
-    <div class="partner-arrows">
-      <button type="button" id="partnerPrev" aria-label="Partenaires précédents">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <div class="partners-window">
-        <div class="partners-track" id="partnersTrack">
-          <div class="partner-card">
-            <span class="partner-symbol bad">BAD</span>
-            <strong> Banque africaine de développement </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol fida">FIDA</span>
-            <strong> Fonds international de développement agricole </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol ofid">OFID</span>
-            <strong> Fonds de l'OPEP pour le développement international </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol uemoa">UEMOA</span>
-            <strong> Union économique et monétaire ouest-africaine </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol ue">UE</span>
-            <strong> Union européenne </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol senegal">🇸🇳</span>
-            <strong> État du Sénégal </strong>
-          </div>
-
-          <div class="partner-card">
-            <span class="partner-symbol pndl">PNDL</span>
-            <strong> Programme national de développement local </strong>
-          </div>
-        </div>
-      </div>
-      <button type="button" id="partnerNext" aria-label="Partenaires suivants">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
+      <a class="btn-custom btn-blue" th:href="@{/pdzp}">
+        Découvrir le projet <i class="fa-solid fa-arrow-right"></i>
+      </a>
     </div>
   </div>
 </section>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -595,14 +488,14 @@
   <div class="pdzp-footer__wrap">
     <div class="pdzp-footer__columns">
       <div class="pdzp-footer__identity">
-        <a th:href="@{/}" class="pdzp-footer__brand">
+        <span class="pdzp-footer__brand">
           <span class="pdzp-footer__logo">
             <img th:src="@{/img/logo2.jpeg}">
           </span>
           <span class="pdzp-footer__heading h3">
              <p>Projet de Désenclavement<br> des Zones de Production</p>
           </span>
-        </a>
+        </span>
         <p>Connecter les territoires, rapprocher les producteurs des marchés et soutenir les dynamiques économiques rurales.</p>
       </div>
 
@@ -637,14 +530,14 @@
       </div>
 
       <div class="pdzp-footer__identity">
-        <a th:href="@{/}" class="pdzp-footer__brand">
+        <span class="pdzp-footer__brand">
           <span class="pdzp-footer__logo">
            <strong>PNDL</strong>
           </span>
           <span class="pdzp-footer__heading h3">
            <p>Pgrogramme Nationale <br>de développement local</p>
           </span>
-        </a>
+        </span>
         <p> Une dynamique de développement au service des collectivités territoriales et des populations rurales.</p>
         <a href="https://www.pndl.org/" class="pdzp-footer__pndl-link" target="_blank" rel="noopener noreferrer">
           Visiter le site du PNDL <i class="fa-solid fa-arrow-right"></i>

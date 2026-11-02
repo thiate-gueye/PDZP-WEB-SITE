@@ -68,7 +68,7 @@ section[id] {
 }
 
 .section-padding {
-  padding: 95px 0;
+  padding: 50px 0;
 }
 
 .eyebrow {
@@ -831,7 +831,7 @@ section[id] {
 /* ===== BANDEAU D'APPEL À L'ACTION ===== */
 
 .cta-band {
-  padding: 0 0 90px;
+  padding: 50px;
 }
 
 .cta-panel {
@@ -1492,7 +1492,6 @@ section[id] {
   margin: 0 auto;
 }
 
-/* Grande signature */
 
 .pdzp-footer__hero {
   position: relative;

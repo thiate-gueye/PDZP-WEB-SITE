@@ -1,359 +1,370 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/layout :: head}">
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+            content="Découvrez le PDZP-2 : objectifs, axes stratégiques, territoires d'intervention et approche de développement rural."/>
+    <meta name="theme-color" content="#007BFF" />
+    <title>Comprendre le PDZP-2 | PNDL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"/>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/le_projet.css}" />
 </head>
-<body id="top">
+<body id="top" data-page="projet">
 <main>
-    <header th:replace="~{fragments/layout :: header}"> </header>
-
-    <section class="hero" id="accueil">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000"
-             data-bs-pause="hover">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Image 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Image 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Image 3"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+    <header class="site-header" id="mainNavbar">
+        <div class="site-container site-header__inner">
+            <a class="site-brand" th:href="@{/}" aria-label="Accueil du PDZP-2"><img th:src="@{/img/logo1.jpeg}" />
+                <span class="site-brand__name">PDZP-2
+                    <small>PROJET DE DÉSENCLAVEMENT DES ZONES DE PRODUCTION</small>
+                </span>
+            </a>
+            <div class="site-menu" id="siteMenu">
+                <ul class="site-nav">
+                    <li><a class="site-link" th:href="@{/}">Accueil</a></li>
+                    <li><a class="site-link" th:href="@{/pdzp}">Projet</a></li>
+                    <li><a class="site-link" th:href="@{/actualite}">Actualités</a></li>
+                    <li><a class="site-link" th:href="@{/phototech}">Réalisations</a></li>
+                    <li><a class="site-link" th:href="@{/sig}">Cartographie</a></li>
+                    <li><a class="site-link" th:href="@{/publication}">Documentation</a></li>
+                    <li><a class="site-link" th:href="@{/contact}">Contact</a></li>
+                </ul>
             </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url('img/Panorama rural.png')"></div>
-                <div class="carousel-item" style="background-image: url('img/pisteillus.jpeg')"></div>
-                <div class="carousel-item" style="background-image: url('img/Chemin rural vers le village africain.png')"></div>
-                <div class="carousel-item" style="background-image: url('img/supdiourbel.jpeg')"></div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Image précédente">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Image suivante">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
+        <div class="site-progress" id="siteProgress" style="width: 0%;"></div>
+    </header>
 
+    <section class="hero" id="presentation">
+        <div class="hero-mosaic" id="mosaic" aria-hidden="true"></div>
         <div class="container">
             <div class="hero-content">
-                <span class="eyebrow">Comprendre le projet </span>
-                <h1> Connecter les territoires. <br /> <span>Révéler les potentiels.</span></h1>
-                <p class="hero-copy">
-                    Le Projet de Désenclavement des Zones de Production, phase 2 (PDZP-2), accompagne le développement économique en milieu rural en rapprochant les zones de production des marchés.
+                <span class="eyebrow">Comprendre le Projet</span>
+                <h1>Connecter les territoires.<br /><span>Révéler les potentiels.</span></h1>
+                <p>
+                    Le Projet de Désenclavement des Zones de Production, phase 2 (PDZP-2), accompagne le développement économique
+                    en milieu rural en rapprochant les zones de production des marchés.
                 </p>
-            </div>
-            <div class="hero-actions"></div>
-            <div class="hero-count">
-                <div><strong class="counter" data-target="12">0</strong><span>régions</span></div>
-                <div>
-                    <strong class="counter" data-target="32">0</strong><span>départements</span>
+                <div class="hero-actions"></div>
+                <div class="hero-count">
+                    <div><strong class="counter" data-target="12">0</strong><span>régions</span></div>
+                    <div><strong class="counter" data-target="32">0</strong><span>départements</span></div>
+                    <div><strong class="counter" data-target="66">0</strong><span>communes</span></div>
+                    <div><strong class="counter" data-target="770">0</strong><span>villages</span></div>
                 </div>
-                <div><strong class="counter" data-target="66">0</strong><span>communes</span></div>
-                <div><strong class="counter" data-target="770">0</strong><span>villages</span></div>
+                <p class="hero-note">Périmètre de couverture du projet</p>
             </div>
-            <p class="hero-note">Périmètre de couverture du projet</p>
         </div>
     </section>
 
-
-
-        <div class="sectorbar">
-            <div class="container sectorbar-in" id="chips" role="tablist" aria-label="Sections">
-                <a class="chip active" href="#ambition"><i class="fa-solid fa-bullseye"></i>PDZP</a>
-                <a class="chip" href="#priorites"><i class="fa-solid fa-road"></i>Nos priorités</a>
-                <a class="chip" href="#mise-en-oeuvre"
-                ><i class="fa-solid fa-diagram-project"></i>Notre approche</a
-                >
-                <a class="chip" href="#territoires"
-                ><i class="fa-solid fa-map-location-dot"></i>Territoires</a
-                >
-                <a class="chip" href="#beneficiaires"><i class="fa-solid fa-people-group"></i>Acteurs</a>
-                <a class="chip" href="#resultats"><i class="fa-solid fa-chart-line"></i>Résultats</a>
-            </div>
-            <div class="progress" id="prog"></div>
+    <div class="sectorbar">
+        <div class="container sectorbar-in" id="chips" role="tablist" aria-label="Sections">
+            <a class="chip active" href="#ambition"><i class="fa-solid fa-bullseye"></i>PDZP</a>
+            <a class="chip" href="#priorites"><i class="fa-solid fa-road"></i>Nos priorités</a>
+            <a class="chip" href="#mise-en-oeuvre"><i class="fa-solid fa-diagram-project"></i>Notre approche</a>
+            <a class="chip" href="#territoires"><i class="fa-solid fa-map-location-dot"></i>Territoires</a>
+            <a class="chip" href="#beneficiaires"><i class="fa-solid fa-people-group"></i>Acteurs</a>
+            <a class="chip" href="#resultats"><i class="fa-solid fa-chart-line"></i>Résultats</a>
         </div>
+        <div class="progress" id="prog"></div>
+    </div>
 
+    <section class="sec" id="ambition" data-k="0">
+        <div class="container intro">
+            <div class="intro-aside reveal">
+                <span class="eyebrow">L'essentiel du projet</span>
+                <h2>Un développement rural qui part des territoires.</h2>
+                <p>
+                    Le PDZP-2 s'inscrit dans la continuité des interventions antérieures. Il consolide les dynamiques économiques *
+                    locales en agissant sur les infrastructures, la production, les chaînes de valeur et les capacités des acteurs.
+                </p>
+                <a href="#mise-en-oeuvre" class="btn btn-dark">
+                    Comprendre notre approche <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="timeline reveal r">
+                <article class="tl">
+                    <h3>Une ambition économique inclusive</h3>
+                    <p>Contribuer à une croissance forte et inclusive en milieu rural, en valorisant les potentialités productives des territoires.</p>
+                </article>
+                <article class="tl">
+                    <h3>Des zones de production mieux connectées</h3>
+                    <p>Améliorer l'accès aux zones de production et aux marchés pour faciliter les déplacements, la circulation des produits et les échanges.</p>
+                </article>
+                <article class="tl">
+                    <h3>Des chaînes de valeur plus dynamiques</h3>
+                    <p>Soutenir les activités locales et renforcer l'insertion professionnelle des jeunes et des femmes autour des filières porteuses.</p>
+                </article>
+                <article class="tl">
+                    <h3>Des acteurs mieux accompagnés</h3>
+                    <p>Renforcer les capacités territoriales pour planifier, mettre en œuvre et suivre les investissements au plus près des besoins.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 
-        <section class="sec" id="ambition" data-k="0">
-            <div class="container intro">
-                <div class="intro-aside reveal">
-                    <span class="eyebrow">L'essentiel du projet</span>
-                    <h2>Un développement rural partant des territoires.</h2>
-                    <p>
-                        Le PDZP-2 s'inscrit dans la continuité des interventions antérieures. Il consolide les
-                        dynamiques économiques locales en agissant sur les infrastructures, la production, les
-                        chaînes de valeur et les capacités des acteurs.
-                    </p>
-                    <a href="#mise-en-oeuvre" class="btn btn-dark"
-                    >Comprendre notre approche <i class="fa-solid fa-arrow-right"></i
-                    ></a>
+    <section class="sec alt" id="priorites" data-k="1">
+        <div class="container">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Nos axes d'intervention</span>
+                <h2>Quatre priorités pour transformer le potentiel en opportunités.</h2>
+                <p>Des leviers complémentaires : accès aux marchés, activités économiques, conditions de vie et capacités locales.</p>
+            </div>
+            <div class="grid2">
+                <article class="card reveal">
+                    <div class="icon"><i class="fa-solid fa-road"></i></div>
+                    <h3>Désenclaver les zones de production</h3>
+                    <p>Améliorer la connectivité entre espaces ruraux, bassins de production et marchés.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Pistes et voies d'accès rurales</li>
+                        <li><i class="fa-solid fa-check"></i>Accessibilité des zones de production</li>
+                        <li><i class="fa-solid fa-check"></i>Facilitation des échanges commerciaux</li>
+                    </ul>
+                </article>
+                <article class="card reveal r">
+                    <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                    <h3>Développer les chaînes de valeur</h3>
+                    <p>Renforcer les filières productives et les opportunités d'emploi et d'entrepreneuriat local.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Valorisation des productions locales</li>
+                        <li><i class="fa-solid fa-check"></i>Opportunités pour les jeunes et les femmes</li>
+                        <li><i class="fa-solid fa-check"></i>Dynamisation des économies territoriales</li>
+                    </ul>
+                </article>
+                <article class="card reveal">
+                    <div class="icon"><i class="fa-solid fa-building-circle-check"></i></div>
+                    <h3>Renforcer les infrastructures et services de base</h3>
+                    <p>Soutenir des investissements qui améliorent l'environnement de production et les conditions de vie.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Infrastructures et équipements collectifs</li>
+                        <li><i class="fa-solid fa-check"></i>Appui aux activités rurales</li>
+                        <li><i class="fa-solid fa-check"></i>Amélioration du cadre de vie</li>
+                    </ul>
+                </article>
+                <article class="card reveal r">
+                    <div class="icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>Renforcer les capacités des acteurs territoriaux</h3>
+                    <p>Accompagner les collectivités et partenaires dans la préparation, l'exécution et le suivi.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-check"></i>Appui à la maîtrise d'ouvrage locale</li>
+                        <li><i class="fa-solid fa-check"></i>Coordination des acteurs territoriaux</li>
+                        <li><i class="fa-solid fa-check"></i>Suivi et valorisation des réalisations</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec" id="mise-en-oeuvre" data-k="2">
+        <div class="container">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Notre approche</span>
+                <h2>Du besoin local à l'investissement utile.</h2>
+                <p>Une démarche qui articule priorités des territoires, réalisation des investissements, accompagnement des acteurs et suivi des progrès.</p>
+            </div>
+            <div class="steps reveal">
+                <article class="step">
+                    <b>01</b>
+                    <h3>Identifier les besoins</h3>
+                    <p>Prendre en compte contraintes, potentialités productives et priorités des territoires.</p>
+                </article>
+                <article class="step">
+                    <b>02</b>
+                    <h3>Programmer les interventions</h3>
+                    <p>Préparer les investissements avec les collectivités et partenaires concernés.</p>
+                </article>
+                <article class="step">
+                    <b>03</b>
+                    <h3>Réaliser et accompagner</h3>
+                    <p>Soutenir infrastructures et activités économiques en associant les acteurs locaux.</p>
+                </article>
+                <article class="step">
+                    <b>04</b>
+                    <h3>Suivre et apprendre</h3>
+                    <p>Documenter les réalisations et utiliser l'information pour améliorer le pilotage.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec alt" id="territoires" data-k="3">
+        <div class="container terr">
+            <div class="reveal">
+                <span class="eyebrow">Ancrage territorial</span>
+                <h2>Au plus près des réalités locales.</h2>
+                <p>Le programme couvre un vaste périmètre au Sénégal pour rapprocher les interventions des besoins des collectivités, des producteurs et des acteurs locaux.</p>
+                <div class="chips2">
+                    <span>Diourbel</span><span>Fatick</span><span>Kaffrine</span><span>Kaolack</span>
+                    <span>Kédougou</span><span>Kolda</span><span>Louga</span><span>Matam</span>
+                    <span>Saint-Louis</span><span>Sédhiou</span><span>Tambacounda</span >
+                    <span>Thiès</span>
                 </div>
-                <div class="timeline reveal r">
-                    <article class="tl">
-                        <h3>Une ambition économique inclusive</h3>
-                        <p>
-                            Contribuer à une croissance forte et inclusive en milieu rural, en valorisant les
-                            potentialités productives des territoires.
-                        </p>
-                    </article>
-                    <article class="tl">
-                        <h3>Des zones de production mieux connectées</h3>
-                        <p>
-                            Améliorer l'accès aux zones de production et aux marchés pour faciliter les
-                            déplacements, la circulation des produits et les échanges.
-                        </p>
-                    </article>
-                    <article class="tl">
-                        <h3>Des chaînes de valeur plus dynamiques</h3>
-                        <p>
-                            Soutenir les activités locales et renforcer l'insertion professionnelle des jeunes
-                            et des femmes autour des filières porteuses.
-                        </p>
-                    </article>
-                    <article class="tl">
-                        <h3>Des acteurs mieux accompagnés</h3>
-                        <p>
-                            Renforcer les capacités territoriales pour planifier, mettre en œuvre et suivre les
-                            investissements au plus près des besoins.
-                        </p>
-                    </article>
+                <a th:href="@{/sig}" class="btn btn-dark">
+                    Explorer la cartographie <i class="fa-solid fa-map-location-dot"></i>
+                </a>
+            </div>
+            <div class="stage reveal r" role="img" aria-label="Territoires d'intervention du PDZP-2">
+                <div class="cap">
+                    <small>Une approche territoriale</small>
+                    <h3>12 régions, 66 communes, 770 villages</h3>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="sec alt" id="priorites" data-k="1">
-            <div class="container">
-                <div class="sec-head reveal">
-                    <span class="eyebrow">Nos axes d'intervention</span>
-                    <h2>Quatre priorités pour transformer le potentiel en opportunités.</h2>
-                    <p>
-                        Des leviers complémentaires : accès aux marchés, activités économiques, conditions de
-                        vie et capacités locales.
-                    </p>
+    <section class="sec" id="beneficiaires" data-k="4">
+        <div class="container">
+            <div class="sec-head reveal">
+                <span class="eyebrow">Les acteurs du changement</span>
+                <h2>Un projet construit autour des dynamiques locales.</h2>
+                <p>Les investissements s'inscrivent dans un écosystème d'acteurs complémentaires, mobilisés pour le développement des territoires.</p>
+            </div>
+            <div class="grid3">
+                <article class="card simple reveal">
+                    <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+                    <h3>Collectivités territoriales</h3>
+                    <p>Essentielles à l'identification des besoins, à la maîtrise d'ouvrage et à l'ancrage local des investissements.</p>
+                </article>
+                <article class="card simple reveal">
+                    <div class="icon"><i class="fa-solid fa-tractor"></i></div>
+                    <h3>Producteurs et organisations locales</h3>
+                    <p>Au cœur des dynamiques productives, de la valorisation des ressources et du développement des filières.</p>
+                </article>
+                <article class="card simple reveal r">
+                    <div class="icon"><i class="fa-solid fa-user-group"></i></div>
+                    <h3>Jeunes et femmes</h3>
+                    <p>Des publics pour qui l'emploi, l'activité économique et la participation aux chaînes de valeur sont une priorité.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="results" id="resultats" data-k="5">
+        <div class="container results-in">
+            <div class="reveal">
+                <span class="eyebrow">La culture du résultat</span>
+                <h2>Des investissements suivis, des progrès documentés.</h2>
+                <p>
+                    La portée d'un projet ne se mesure pas qu'aux ouvrages réalisés : elle tient aussi à leur utilité, leur accessibilité
+                    et aux changements observés dans les territoires. Quelques résultats phares de la première phase :
+                </p>
+            </div>
+            <div class="reveal r">
+                <div class="rp">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div><strong>680 Km</strong><span>de pistes rurales réalisées ou réhabilitées</span></div>
                 </div>
-                <div class="grid2">
-                    <article class="card reveal">
-                        <div class="icon"><i class="fa-solid fa-road"></i></div>
-                        <h3>Désenclaver les zones de production</h3>
-                        <p>
-                            Améliorer la connectivité entre espaces ruraux, bassins de production et marchés.
-                        </p>
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Pistes et voies d'accès rurales</li>
-                            <li><i class="fa-solid fa-check"></i>Accessibilité des zones de production</li>
-                            <li><i class="fa-solid fa-check"></i>Facilitation des échanges commerciaux</li>
-                        </ul>
-                    </article>
-                    <article class="card reveal r">
-                        <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div>
-                        <h3>Développer les chaînes de valeur</h3>
-                        <p>
-                            Renforcer les filières productives et les opportunités d'emploi et d'entrepreneuriat
-                            local.
-                        </p>
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Valorisation des productions locales</li>
-                            <li><i class="fa-solid fa-check"></i>Opportunités pour les jeunes et les femmes</li>
-                            <li><i class="fa-solid fa-check"></i>Dynamisation des économies territoriales</li>
-                        </ul>
-                    </article>
-                    <article class="card reveal">
-                        <div class="icon"><i class="fa-solid fa-building-circle-check"></i></div>
-                        <h3>Renforcer les infrastructures et services de base</h3>
-                        <p>
-                            Soutenir des investissements qui améliorent l'environnement de production et les
-                            conditions de vie.
-                        </p>
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Infrastructures et équipements collectifs</li>
-                            <li><i class="fa-solid fa-check"></i>Appui aux activités rurales</li>
-                            <li><i class="fa-solid fa-check"></i>Amélioration du cadre de vie</li>
-                        </ul>
-                    </article>
-                    <article class="card reveal r">
-                        <div class="icon"><i class="fa-solid fa-people-group"></i></div>
-                        <h3>Renforcer les capacités des acteurs territoriaux</h3>
-                        <p>
-                            Accompagner les collectivités et partenaires dans la préparation, l'exécution et le
-                            suivi.
-                        </p>
-                        <ul>
-                            <li><i class="fa-solid fa-check"></i>Appui à la maîtrise d'ouvrage locale</li>
-                            <li><i class="fa-solid fa-check"></i>Coordination des acteurs territoriaux</li>
-                            <li><i class="fa-solid fa-check"></i>Suivi et valorisation des réalisations</li>
-                        </ul>
-                    </article>
+                <div class="rp">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <div><strong>1 365</strong><span>Infrastructures et équipements économiques</span></div>
+                </div>
+                <div class="rp">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div><strong>6 260</strong><span>Emplois créés ou consolidés</span></div>
+                </div>
+                <div class="rp">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div><strong>531 087</strong><span>Bénéficiaires directs du projet</span></div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="sec" id="mise-en-oeuvre" data-k="2">
-            <div class="container">
-                <div class="sec-head reveal">
-                    <span class="eyebrow">Notre approche</span>
-                    <h2>Du besoin local à l'investissement utile.</h2>
-                    <p>
-                        Une démarche qui articule priorités des territoires, réalisation des investissements,
-                        accompagnement des acteurs et suivi des progrès.
-                    </p>
+    <section class="cta">
+        <div class="container">
+            <div class="cta-panel">
+                <div>
+                    <h2>Découvrez le PDZP-2 sur le terrain.</h2>
+                    <p>Consultez les documents, explorez les territoires et parcourez les réalisations en images.</p>
                 </div>
-                <div class="steps reveal">
-                    <article class="step">
-                        <b>01</b>
-                        <h3>Identifier les besoins</h3>
-                        <p>
-                            Prendre en compte contraintes, potentialités productives et priorités des
-                            territoires.
-                        </p>
-                    </article>
-                    <article class="step">
-                        <b>02</b>
-                        <h3>Programmer les interventions</h3>
-                        <p>Préparer les investissements avec les collectivités et partenaires concernés.</p>
-                    </article>
-                    <article class="step">
-                        <b>03</b>
-                        <h3>Réaliser et accompagner</h3>
-                        <p>
-                            Soutenir infrastructures et activités économiques en associant les acteurs locaux.
-                        </p>
-                    </article>
-                    <article class="step">
-                        <b>04</b>
-                        <h3>Suivre et apprendre</h3>
-                        <p>
-                            Documenter les réalisations et utiliser l'information pour améliorer le pilotage.
-                        </p>
-                    </article>
+                <div class="cta-btns">
+                    <a class="btn btn-dark" th:href="@{/phototech}"><i class="fa-regular fa-images"></i> Voir la photothèque</a>
+                    <a class="btn btn-line" th:href="@{/publication}">Publications <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="sec alt" id="territoires" data-k="3">
-            <div class="container terr">
-                <div class="reveal">
-                    <span class="eyebrow">Ancrage territorial</span>
-                    <h2>Au plus près des réalités locales.</h2>
-                    <p>
-                        Le programme couvre un vaste périmètre au Sénégal pour rapprocher les interventions
-                        des besoins des collectivités, des producteurs et des acteurs locaux.
-                    </p>
-                    <div class="chips2">
-                        <span>Diourbel</span><span>Fatick</span><span>Kaffrine</span><span>Kaolack</span
-                    ><span>Kédougou</span><span>Kolda</span><span>Louga</span><span>Matam</span
-                    ><span>Saint-Louis</span><span>Sédhiou</span><span>Tambacounda</span
-                    ><span>Thiès</span>
-                    </div>
-                    <a href="sig.html" class="btn btn-dark"
-                    >Explorer la cartographie <i class="fa-solid fa-map-location-dot"></i
-                    ></a>
+    <footer class="pdzp-footer" id="siteFooter">
+        <div class="pdzp-footer__topline"></div>
+        <div class="pdzp-footer__wrap">
+            <div class="pdzp-footer__columns">
+                <div class="pdzp-footer__identity">
+                    <a th:href="@{/}" class="pdzp-footer__brand">
+                      <span class="pdzp-footer__logo">
+                        <img th:src="@{/img/logo2.jpeg}" />
+                      </span>
+                      <span class="pdzp-footer__heading h3">
+                         <p>Projet de Désenclavement<br> des Zones de Production</p>
+                      </span>
+                    </a>
+                    <p>Connecter les territoires, rapprocher les producteurs des marchés et soutenir les dynamiques économiques rurales.</p>
                 </div>
-                <div class="stage reveal r" role="img" aria-label="Territoires d'intervention du PDZP-2">
-                    <div class="cap">
-                        <small>Une approche territoriale</small>
-                        <h3>12 régions · 66 communes · 770 villages</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="sec" id="beneficiaires" data-k="4">
-            <div class="container">
-                <div class="sec-head reveal">
-                    <span class="eyebrow">Les acteurs du changement</span>
-                    <h2>Un projet construit autour des dynamiques locales.</h2>
-                    <p>
-                        Les investissements s'inscrivent dans un écosystème d'acteurs complémentaires,
-                        mobilisés pour le développement des territoires.
-                    </p>
+                <div class="pdzp-footer__block">
+                    <h3 class="pdzp-footer__heading">
+                    <span class="pdzp-footer__heading-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    Nous localiser
+                    </h3>
+                    <p class="pdzp-footer__location-title">Cité Keur Gorgui Lot n°56</p>
+                    <p class="pdzp-footer__muted">Dakar, Sénégal</p>
+                    <a class="pdzp-footer__text-link" target="_blank" rel="noopener noreferrer"
+                       href="https://www.google.com/maps/search/?api=1&query=Programme+National+de+D%C3%A9veloppement+Local+Dakar+S%C3%A9n%C3%A9gal">
+                        Voir l'itinéraire <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                 </div>
-                <div class="grid3">
-                    <article class="card simple reveal">
-                        <div class="icon"><i class="fa-solid fa-landmark"></i></div>
-                        <h3>Collectivités territoriales</h3>
-                        <p>
-                            Essentielles à l'identification des besoins, à la maîtrise d'ouvrage et à l'ancrage
-                            local des investissements.
-                        </p>
-                    </article>
-                    <article class="card simple reveal">
-                        <div class="icon"><i class="fa-solid fa-tractor"></i></div>
-                        <h3>Producteurs et organisations locales</h3>
-                        <p>
-                            Au cœur des dynamiques productives, de la valorisation des ressources et du
-                            développement des filières.
-                        </p>
-                    </article>
-                    <article class="card simple reveal r">
-                        <div class="icon"><i class="fa-solid fa-user-group"></i></div>
-                        <h3>Jeunes et femmes</h3>
-                        <p>
-                            Des publics pour qui l'emploi, l'activité économique et la participation aux chaînes
-                            de valeur sont une priorité.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
 
-        <section class="results" id="resultats" data-k="5">
-            <div class="container results-in">
-                <div class="reveal">
-                    <span class="eyebrow">La culture du résultat</span>
-                    <h2>Des investissements suivis, des progrès documentés.</h2>
-                    <p>
-                        La portée d'un projet ne se mesure pas qu'aux ouvrages réalisés : elle tient aussi à
-                        leur utilité, leur accessibilité et aux changements observés dans les territoires.
-                        Quelsues résultats phares de la prmière phase :
-                    </p>
-                </div>
-                <div class="reveal r">
-                    <div class="rp">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <div>
-                            <strong>680 Km</strong><span>de pistes rurales réalisées ou réhabilitées</span>
+                <div class="pdzp-footer__block">
+                    <h3 class="pdzp-footer__heading">
+                      <span class="pdzp-footer__heading-icon">
+                        <i class="fa-regular fa-clock"></i>
+                      </span>
+                        Horaires de travail
+                    </h3>
+                    <div class="pdzp-footer__hours">
+                        <div class="pdzp-footer__hours-row">
+                            <span>Lundi – Vendredi</span>
+                            <strong>08h00 – 17h00</strong>
                         </div>
                     </div>
-                    <div class="rp">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                        <div>
-                            <strong>1 365</strong><span>Infrastructures et équipements économiques</span>
-                        </div>
-                    </div>
-                    <div class="rp">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <div><strong>6 260</strong><span>Emplois créés ou consolidés</span></div>
-                    </div>
-                    <div class="rp">
-                        <i class="fa-solid fa-lightbulb"></i>
-                        <div><strong>531 087</strong><span>Bénéficiaires directs du projet</span></div>
-                    </div>
+                </div>
+
+                <div class="pdzp-footer__identity">
+                    <a th:href="@{/}" class="pdzp-footer__brand">
+                      <span class="pdzp-footer__logo">
+                        <strong>PNDL</strong>
+                      </span>
+                      <span class="pdzp-footer__heading h3">
+                       <p>Pgrogramme Nationale <br>de développement local</p>
+                      </span>
+                    </a>
+                    <p> Une dynamique de développement au service des collectivités territoriales et des populations rurales.</p>
+                    <a href="https://www.pndl.org/" class="pdzp-footer__pndl-link" target="_blank" rel="noopener noreferrer">
+                        Visiter le site du PNDL <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <section class="cta">
-            <div class="container">
-                <div class="cta-panel">
-                    <div>
-                        <h2>Découvrez le PDZP-2 sur le terrain.</h2>
-                        <p>
-                            Consultez les documents, explorez les territoires et parcourez les réalisations du projet en
-                            images.
-                        </p>
-                    </div>
-                    <div class="cta-btns">
-                        <a class="btn btn-dark" href="phototheque.html"
-                        ><i class="fa-regular fa-images"></i> photothèque</a
-                        ><a class="btn btn-line" href="publications.html"
-                    >Publications <i class="fa-solid fa-arrow-right"></i
-                    ></a>
-                    </div>
-                </div>
+            <div class="pdzp-footer__bottom">
+                <span> © 2026 PDZP-2 · Tous droits réservés </span>
+                <span class="pdzp-footer__bottom-motto h5">
+                    Connecter les territoires, Révéler les potentiels.
+                </span>
+                <a href="#top" class="pdzp-footer__back-top"></a>
+                <button class="site-back-top show" id="backTop" type="button" aria-label="Retour en haut">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
             </div>
-        </section>
-
-
-
+        </div>
+    </footer>
+    <script th:src="@{/js/main.js}" defer></script>
+    <script th:src="@{/js/le_projet.js}" defer></script>
 </main>
-<footer th:replace="~{fragments/layout :: footer}"></footer>
 </body>
 </html>

@@ -23,6 +23,21 @@ public class AccueilController {
         return "projet/le_projet";
     }
 
+    @GetMapping("/pdzp/composante1")
+    public String composante1(){
+        return "projet/composante1";
+    }
+
+    @GetMapping("/pdzp/composante2")
+    public String composante2(){
+        return "projet/composante2";
+    }
+
+    @GetMapping("/pdzp/composante3")
+    public String composante3(){
+        return "projet/composante3";
+    }
+
     @GetMapping("/phototech")
     public String phototeque(){
         return "realisations/phototeque";

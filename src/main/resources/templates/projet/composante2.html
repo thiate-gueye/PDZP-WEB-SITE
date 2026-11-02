@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>Composante 2</h1>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head}"></head>
 
+<body id="top">
+
+<header th:replace="~{fragments/layout :: siteHeader}"></header>
+
+<section th:replace="~{fragments/layout :: heroCarousel}"></section>
+
+<main>
+    <h1>Composante 2</h1>
+</main>
+
+<section th:replace="~{fragments/layout :: ctaBand}"></section>
+
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
 </body>
 </html>

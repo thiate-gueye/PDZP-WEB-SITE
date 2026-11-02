@@ -2,12 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{fragments/layout :: head}">
 </head>
-<body id="top">
-<main>
-    <head th:replace="~{fragments/layout :: header}">
-        <h1>Cartographie</h1>
 
+<body id="top">
+
+<!-- Menu commun -->
+<header th:replace="~{fragments/layout :: siteHeader}"></header>
+
+<!-- Carrousel commun -->
+<section th:replace="~{fragments/layout :: heroCarousel}"></section>
+
+<!-- Contenu propre à chaque page -->
+<main>
+    <!-- Conserver ici toutes les informations existantes -->
 </main>
-<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<!-- CTA commun -->
+<section th:replace="~{fragments/layout :: ctaBand}"></section>
+
+<!-- Footer commun -->
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,32 +8,24 @@
     <title>PDZP-2 | Connecter les territoires, révéler les potentiels</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-
-    <link rel="stylesheet" th:href="@{/css/index.css}"/>
-    <link rel="stylesheet" th:href="@{/css/le_projet.css}"/>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
-
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
 </head>
-<body>
 
-<!-- header -->
-<header th:fragment="header" class="site-header" id="mainNavbar">
+
+<body id="top">
+<header class="site-header" id="mainNavbar" th:fragment="siteHeader">
     <div class="site-container site-header__inner">
         <a class="site-brand" th:href="@{/}" aria-label="Accueil du PDZP-2">
-            <img th:src="@{/img/logo1.jpeg}" alt="Logo du PNDL">
-            <span class="site-brand__name">PDZP-2
-            <small>PROJET DE DÉSENCLAVEMENT DES ZONES DE PRODUCTION</small>
-          </span>
+            <img th:src="@{/img/logo1.jpeg}" alt="Logo" />
+            <span class="site-brand__name">
+                PDZP-2
+                <small>PROJET DE DÉSENCLAVEMENT DES ZONES DE PRODUCTION</small>
+            </span>
         </a>
-        <button class="site-toggle" id="siteToggle" type="button" aria-label="Ouvrir le menu" aria-controls="siteMenu"
-                aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <div class="site-menu" id="siteMenu">
+        <nav class="site-menu" id="siteMenu" aria-label="Navigation principale">
             <ul class="site-nav">
                 <li><a class="site-link" th:href="@{/}">Accueil</a></li>
                 <li><a class="site-link" th:href="@{/pdzp}">Projet</a></li>
@@ -42,47 +33,109 @@
                 <li><a class="site-link" th:href="@{/phototech}">Réalisations</a></li>
                 <li><a class="site-link" th:href="@{/sig}">Cartographie</a></li>
                 <li><a class="site-link" th:href="@{/publication}">Documentation</a></li>
-                <li><a class="site-link" th:href="@{/contact}" aria-current="page">Contact</a></li>
+                <li><a class="site-link" th:href="@{/contact}">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
     <div class="site-progress" id="siteProgress" style="width: 0%;"></div>
 </header>
 
-<!-- Footer -->
-<footer th:fragment="footer" class="pdzp-footer" id="siteFooter">
+
+<section class="hero" id="accueil" th:fragment="heroCarousel">
+    <div id="heroCarousel" class="carousel slide carousel-fade"
+         data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Image 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Image 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Image 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Image 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" th:style="|background-image: url('@{/img/Panorama rural.png}')|"></div>
+            <div class="carousel-item" th:style="|background-image: url('@{/img/matam.png}')|"></div>
+            <div class="carousel-item" th:style="|background-image: url('@{/img/pdzp.png}')|"></div>
+            <div class="carousel-item" th:style="|background-image: url('@{/img/PNDL0.jpeg}')|"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="prev" aria-label="Image précédente">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                data-bs-slide="next" aria-label="Image suivante">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <span class="eyebrow">PDZP-2 : Une nouvelle ambition pour les territoires</span>
+            <h1>Connecter les territoires. <br /><span>Révéler les potentiels.</span></h1>
+            <p class="hero-copy">
+                Des pistes rurales aux chaînes de valeur agricoles, le PDZP contribue à rapprocher les producteurs des marchés et à renforcer
+                les économies locales. Le PDZP-2 entend consolider ces acquis pour inscrire les résultats dans la durée.
+            </p>
+        </div>
+    </div>
+    <div class="container hero-bottom">
+        <div class="hero-tag">
+            <span></span>
+            <strong>Au service des territoires ruraux</strong>
+        </div>
+        <div>
+            <i class="fa-solid fa-angles-down me-2"></i> Découvrez notre action
+        </div>
+    </div>
+</section>
+
+
+<section class="cta-band" th:fragment="ctaBand">
+    <div class="container">
+        <div class="cta-panel reveal">
+            <div>
+                <h2>Comprendre les acquis. Préparer des impacts durables.</h2>
+                <p>
+                    Le PDZP-2 s'inscrit dans la continuité des réalisations et des enseignements de la première phase, avec une attention
+                    renforcée à la durabilité des investissements et au pilotage territorial.
+                </p>
+            </div>
+            <a class="btn-custom btn-blue" th:href="@{/pdzp}">
+                Découvrir le projet <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<footer class="pdzp-footer" id="siteFooter" th:fragment="siteFooter">
     <div class="pdzp-footer__topline"></div>
     <div class="pdzp-footer__wrap">
         <div class="pdzp-footer__columns">
             <div class="pdzp-footer__identity">
-                 <a href="index.html" class="pdzp-footer__brand">
-                      <span class="pdzp-footer__logo">
-                        <img th:src="@{/img/logo2.jpeg}" alt="Logo du PNDL">
-                      </span>
-                     <span class="pdzp-footer__heading h3">
-                        <p>Projet de Désenclavement<br> des Zones de Production</p>
-                    </span>
-                </a>
-                <p> Connecter les territoires, rapprocher les producteurs des marchés et soutenir les dynamiques économiques rurales.</p>
+                <span class="pdzp-footer__brand">
+                  <span class="pdzp-footer__logo">
+                    <img th:src="@{/img/logo2.jpeg}" alt="Logo du PDZP-2" />
+                  </span>
+                  <span class="pdzp-footer__heading h3">
+                    <p>Projet de Désenclavement<br /> des Zones de Production</p>
+                  </span>
+                </span>
+                <p>Connecter les territoires, rapprocher les producteurs des marchés et soutenir les dynamiques économiques rurales.</p>
             </div>
-
             <div class="pdzp-footer__block">
                 <h3 class="pdzp-footer__heading">
-                  <span class="pdzp-footer__heading-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="pdzp-footer__heading-icon"><i class="fa-solid fa-location-dot"></i></span>
                     Nous localiser
                 </h3>
-                <p class="pdzp-footer__location-title">Cité Keur Gorgui Lot n°56 <br> BP 6558</p>
+                <p class="pdzp-footer__location-title">Cité Keur Gorgui Lot n°56</p>
                 <p class="pdzp-footer__muted">Dakar, Sénégal</p>
-                <a class="pdzp-footer__text-link"
-                        href="https://www.google.com/maps/search/?api=1&query=Programme+National+de+D%C3%A9veloppement+Local+Dakar+S%C3%A9n%C3%A9gal"
-                        target="_blank" rel="noopener noreferrer">
+                <a class="pdzp-footer__text-link" target="_blank" rel="noopener noreferrer"
+                   href="https://www.google.com/maps/search/?api=1&amp;query=Programme+National+de+D%C3%A9veloppement+Local+Dakar+S%C3%A9n%C3%A9gal">
                     Voir l'itinéraire <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
-
             <div class="pdzp-footer__block">
                 <h3 class="pdzp-footer__heading">
-                  <span class="pdzp-footer__heading-icon"><i class="fa-regular fa-clock"></i></span>
+                    <span class="pdzp-footer__heading-icon"><i class="fa-regular fa-clock"></i></span>
                     Horaires de travail
                 </h3>
                 <div class="pdzp-footer__hours">
@@ -92,29 +145,24 @@
                     </div>
                 </div>
             </div>
-
             <div class="pdzp-footer__identity">
-                <a href="index.html" class="pdzp-footer__brand">
+                <span class="pdzp-footer__brand">
                   <span class="pdzp-footer__logo"><strong>PNDL</strong></span>
-                    <span class="pdzp-footer__heading h3">
-                    <p>Programme Nationale <br>de Développement Local</p>
+                  <span class="pdzp-footer__heading h3">
+                    <p>Pgrogramme Nationale <br />de développement local</p>
                   </span>
-                </a>
+                </span>
                 <p>Une dynamique de développement au service des collectivités territoriales et des populations rurales.</p>
-                <a  href="http://www.pndl.org/" class="pdzp-footer__pndl-link" target="_blank" rel="noopener noreferrer">
-                    Visiter le site du PNDL
-                    <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://www.pndl.org/" class="pdzp-footer__pndl-link" target="_blank" rel="noopener noreferrer">
+                    Visiter le site du PNDL <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
-
         <div class="pdzp-footer__bottom">
-              <span>© 2026 PDZP-2 · Tous droits réservés</span>
-              <span class="pdzp-footer__bottom-motto h6">
-                Connecter les territoires, Révéler les potentiels.
-              </span>
+            <span>© 2026 PDZP-2 · Tous droits réservés</span>
+            <span class="pdzp-footer__bottom-motto h5">Connecter les territoires, Révéler les potentiels.</span>
             <a href="#top" class="pdzp-footer__back-top"></a>
-            <button class="site-back-top show" id="backTop" type="button" aria-label="Retour en haut">
+            <button class="site-back-top" id="backTop" type="button" aria-label="Retour en haut">
                 <i class="fa-solid fa-arrow-up"></i>
             </button>
         </div>
@@ -122,8 +170,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script th:src="@{/js/main.js}"></script>
-    <script th:src="@{/js/index.js}"></script>
-    <script th:src="@{/js/le_projet.js}"></script>
 </footer>
 </body>
 </html>

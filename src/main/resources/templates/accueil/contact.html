@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{fragments/layout :: head}">
-</head>
-<body id="top">
-<main>
-    <head th:replace="~{fragments/layout :: header}">
-        <h1>Contact</h1>
+<head th:replace="~{fragments/layout :: head}"></head>
 
+<body id="top">
+
+<header th:replace="~{fragments/layout :: siteHeader}"></header>
+
+<section th:replace="~{fragments/layout :: heroCarousel}"></section>
+
+<main>
+    <h1>Contact</h1>
 </main>
-<footer th:replace="~{fragments/layout :: footer}"></footer>
+
+<section th:replace="~{fragments/layout :: ctaBand}"></section>
+
+<footer th:replace="~{fragments/layout :: siteFooter}"></footer>
 </body>
 </html>
